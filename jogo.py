@@ -10,6 +10,8 @@ A = 400
 tela = pygame.display.set_mode((L, A))
 pygame.display.set_caption("Desvie do Bloco!")
 
+imagem = pygame.image.load("durin.jpeg")
+imagem = pygame.transform.scale(imagem,(600,400))
 # CORES
 branco = (255, 255, 255)
 preto = (0, 0, 0)
@@ -96,6 +98,8 @@ while rodando:
 
     # DESENHO
     tela.fill(preto)
+    tela.blit(imagem, (0, 0))
+
     pygame.draw.rect(tela, azul, rect_player)
     pygame.draw.rect(tela, vermelho, rect_obs)
     pygame.draw.circle(tela, amarelo, rect_bonus.center,rect_bonus.width//2)
